@@ -4,24 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Gryffinwheels</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <title>Gryffinwheels Not-o-Trader</title>
+  <style>
+    body {
+      font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
+    }
+    div#mainapp {
+      min-width: 1000px;
+    }
+    nav#navbar {
+      background-color: #6f81aa;
+      color: white;
+    }
+    nav#navbar ul.navbar-items {
+      display: flex;
+      flex: auto;
+      align-items: center;
+      height: 56px;
+      list-style: none;
+      max-height: 50%;
+    }
+    nav#navbar ul.navbar-items li {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      margin: auto;
+    }
+    nav#navbar ul.navbar-items li:first-child {
+      margin-left: 0;
+    }
+    div#left, div#right {
+      display: inline-block;
+    }
+    div#right {
+      float: right;
+      position: absolute;
+    }
+    div#vehicle-overview > div:first-child {
+      margin-left: auto !important;
+    }
+    footer {
+      background-color: #6f81aa;
+      color: white;
+    }
+    footer div#footer-nav {
+      padding-top: 21px;
+      margin-left: 54px;
+    }
+    footer div.legalese {
+      margin-top: 20px;
+      font-size: 0.75em;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div id = "not-o-trader">
-    <div className = "left">
-      <div id = "root"></div>
-      <div id = "details">
-        <div id = "vehicle-overview"></div>
-        <div id = "app"></div>
+  <div id="mainapp">
+    <div id="container">
+      <nav id="navbar">
+        <div class="logo">
+          <ul class="navbar-items">
+            <li>Gryffinwheels Not-O-Trader</li>
+          </ul>
+        </div>
+        <hr />
+        <div>
+          <ul class="navbar-items">
+            <li>Cars for Sale</li>
+            <li>Sell My Car</li>
+            <li>Trade in My Car</li>
+            <li>Car Research &amp; Reviews</li>
+            <li>Find Local Dealers</li>
+            <li>Loans</li>
+            <li>Insurance</li>
+          </ul>
+        </div>
+      </nav>
+      <div id="left">
+        <div id="image-gallery"></div>
+        <div id="vehicle-overview"></div>
+        <div id="app"></div>
       </div>
-    </div>
-    <div className = "right">
-      <div id = "seller-sidebar"></div>
+      <div id="right">
+        <div id="seller-sidebar"></div>
+      </div>
+      <footer>
+        <div id="footer-nav">
+          <div>&gt; Shop for a Car</div>
+          <hr />
+          <div>&gt; Trade orr Sell a Car</div>
+          <hr />
+          <div>&gt; Car Research</div>
+          <hr />
+          <div>&gt; About Us</div>
+          <hr />
+          <div>&gt; Autotrader Affiliates</div>
+          <hr />
+          <div class="legalese">
+            <p>By using this service, you accept the terms of our Visitor Agreement.</p>
+            <p>
+              © 2018 Gryffinwheels Not-O-Trader, Inc. All Rights Reserved.
+              "Gryffinwheels Not-O-Trader" is a registered trademark of HRLA22 Gryffindor Holdings, Inc.
+              used under exclusive license.
+            </p>
+          </div>
+        </div>
+      </footer>
     </div>
   </div>
-  <script src="http://localhost:8000/bundle.js"></script>
-  <script src="http://localhost:5000/bundle.js"></script>
-  <script src="http://localhost:3000/bundle.js"></script>
-  <script src="http://localhost:7000/bundle.js"></script>
+  <script src="http://75.101.193.74:5500/bundle.js"></script> <!-- Seller sidebar -->
+  <script src="http://18.191.161.74:7000/bundle.js"></script> <!-- Image gallery -->
+  <script src="http://52.53.217.43:5673/bundle.js"></script> <!-- About model -->
+  <script src="http://13.56.250.228:8000/bundle.js"></script> <!-- Vehicle overview -->
+  
+  <!-- <script src="https://s3-us-west-1.amazonaws.com/www.gryffinwheels.com/seller-sidebar.js"></script>
+  <script src="https://s3-us-west-1.amazonaws.com/www.gryffinwheels.com/about-model.js"></script>
+  <script src="https://s3-us-west-1.amazonaws.com/www.gryffinwheels.com/image-gallery.js"></script>
+  <script src="https://s3-us-west-1.amazonaws.com/www.gryffinwheels.com/vehicle-overview.js"></script> -->
 </body>
 </html>
